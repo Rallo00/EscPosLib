@@ -15,4 +15,4 @@ yourThermalPrinter.Reset();                              //This resets and also 
 ```
 
 The library is very simple and straight forward.
-It is documented internally with ```cs <summary> ```
+It is documented internally with ```<summary> ```
