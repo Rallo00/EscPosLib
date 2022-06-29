@@ -1,6 +1,11 @@
 # EscPosLib
 This library allows ethernet printing on ESC/POS printers using C#.
 
+--- THE IDEA ---
+I could not find a simple C# library to print stuff on thermal printer via Ethernet, so I created this one.
+There is also a SerialPort version (not mine) to print via USB/Serial RS232.
+
+
 This latest version allows:
 - Layout personalisation (some very basic functions, will be improved);
 - Font selection (by using standard provided fonts);
