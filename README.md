@@ -1,6 +1,15 @@
 # EscPosLib
 This library allows ethernet printing on ESC/POS printers using C#.
 
+This latest version allows:
+- Layout personalisation (some very basic functions, will be improved);
+- Font selection (by using standard provided fonts);
+- Styles selection (Bold, underlined, ...);
+- Justification;
+- Barcode (1D) printing;
+- QR Code printing (not available yet);
+- Image printing (not available yet);
+
 ---- REQUISITES ----
 - .Net Framework SDK v4.8
 
