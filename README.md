@@ -1,0 +1,18 @@
+# EscPosLib
+This library allows ethernet printing on ESC/POS printers using C#.
+
+---- REQUISITES ----
+.Net Framework SDK v4.8
+
+---- HOW TO USE ----
+Add the provided DLL file as Reference into your C# project;
+Add using EscPosLib; at the top of your Project code-behind file;
+
+Create a Printer object as below by pointing out the thermal printer IP address:
+```cs
+Printer yourThermalPrinter = new Printer("192.168.1.2"); //Your printer IP
+yourThermalPrinter.Reset();                              //This resets and also initializes the printer
+```
+
+The library is very simple and straight forward.
+It is documented internally with ```cs <summary> ```
