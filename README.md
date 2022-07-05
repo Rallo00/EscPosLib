@@ -28,4 +28,4 @@ yourThermalPrinter.Reset();                              //This resets and also 
 ```
 
 The library is very simple and straight forward.
-It is documented internally with ```<summary> ```
+It is documented internally with ```<summary> ``` which means that while programming every method shows its own use within the tooltip.
