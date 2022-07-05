@@ -1,4 +1,4 @@
-# What is thi library?
+# What is this library?
 This library allows ethernet printing on ESC/POS printers using C#.
 
 # The Idea
