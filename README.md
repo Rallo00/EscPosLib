@@ -19,7 +19,7 @@ This latest version allows:
 
 # How to use
 - Add the provided DLL file as Reference into your C# project;
-- Add using EscPosLib; at the top of your Project code-behind file;
+- Add `using EscPosLib;` at the top of your Project code-behind file;
 
 Create a Printer object as below by pointing out the thermal printer IP address:
 ```cs
