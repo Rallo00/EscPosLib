@@ -18,14 +18,5 @@ This latest version allows:
 - .Net Framework SDK v4.8
 
 # How to use
-- Add the provided DLL file as Reference into your C# project;
-- Add `using EscPosLib;` at the top of your Project code-behind file;
-
-Create a Printer object as below by pointing out the thermal printer IP address:
-```cs
-Printer yourThermalPrinter = new Printer("192.168.1.2"); //Your printer IP
-yourThermalPrinter.Reset();                              //This resets and also initializes the printer
-```
-
-The library is very simple and straight forward.
-It is documented internally with ```<summary> ``` which means that while programming every method shows its own use within the tooltip.
+Please check the wiki for further information.
+Thank you.
