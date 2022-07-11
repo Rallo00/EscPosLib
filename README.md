@@ -20,3 +20,7 @@ This latest version allows:
 # How to use
 Please check the wiki for further information.
 Thank you.
+
+# Quick image of what the library can do.
+
+![receipt](https://user-images.githubusercontent.com/106067524/178227448-eb8f762f-c594-4bcb-8b18-48678ee65fe4.png)
