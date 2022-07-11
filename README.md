@@ -11,8 +11,9 @@ This latest version allows:
 - Styles selection (Bold, underlined, ...);
 - Justification;
 - Barcode (1D) printing;
-- QR Code printing (not available yet);
-- Image printing (not available yet);
+- QR Code printing;
+- Image printing;
+- Receipt printing;
 
 # Requisites
 - .Net Framework SDK v4.8
