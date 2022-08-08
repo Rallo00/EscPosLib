@@ -14,6 +14,7 @@ This latest version allows:
 - QR Code printing;
 - Image printing;
 - Receipt printing;
+- Printing with different alphabets;
 
 # Requisites
 - .Net Framework SDK v4.8
