@@ -100,6 +100,33 @@ public class Printer
     }
     #endregion
 
+    #region Settings
+    /// <summary>
+    /// Sets the printer offline
+    /// </summary>
+    public void Sleep()
+    {
+        _networkSend(new byte[] { ESC, 61, 0 });
+    }
+    /// <summary>
+    /// Sets the printer online
+    /// </summary>
+    public void WakeUp()
+    {
+        _networkSend(new byte[] { ESC, 61, 1 });
+    }
+    /// <summary>
+    /// Sets the printing preferences
+    /// </summary>
+    /// <param name="maxPrintingDots">Max printing dots (0-255), unit: (n+1)*8 dots, default: 7 (beceause (7+1)*8 = 64 dots)</param>
+    /// <param name="heatTime">Heating time (3-255), unit: 10µs, default: 80 (800µs)</param>
+    /// <param name="heatInterval">Heating interval (0-255), unit: 10µs, default: 2 (20µs)</param>
+    public void SetPrintSettings(byte maxPrintingDots, byte heatTime, byte heatInterval)
+    {
+        _networkSend(new byte[] { ESC, 55, });
+    }
+    #endregion
+
     #region Printer
     /// <summary>
     /// Reset the data buffer and initializes the printer.
@@ -154,6 +181,10 @@ public class Printer
     {
         foreach (byte b in cmd)
             BUFFER.Add(b);
+    }
+    public void GenerateBeep()
+    {
+        RawDecimalToBuffer(new byte[] { 27, 112, 1, 120, 20, 27, 115, 27, 112, 0, 120, 120, 28, 192, 7, 27, 66, 4, 1 });
     }
     #endregion
 
@@ -624,8 +655,9 @@ public class Printer
         //Valid no-transparency format
         if (Path.GetExtension(fileName).ToLower() == ".jpg" || Path.GetExtension(fileName).ToLower() == ".jpeg" || Path.GetExtension(fileName).ToLower() == ".gif")
             PrintImage(new Bitmap(fileName), printToCenter);
-        //Png/transparency format
-        else if (Path.GetExtension(fileName).ToLower() == "png") { /*Convert*/ }
+        //Not supported formats
+        else 
+            throw new ArgumentException("PNG formats are not supported due to transparency. Please use a Bitmap format.");
     }
     public void PrintImage(Bitmap bmp, bool printToCenter)
     {
