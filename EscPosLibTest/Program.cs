@@ -12,11 +12,10 @@ namespace EscPosLibTest
         {
             Console.Write("IP: ");
             string ip = Console.ReadLine();
-            Printer printer = new Printer(ip);
-            //printer.Region = Printer.Alphabet.Multilingual;
+            EthPrinter printer = new EthPrinter(ip);
+            printer.Region = Printer.Alphabet.Multilingual;
             printer.Reset();
             printer.ExampleReceipt();
-            printer.GenerateBeep();
             printer.PrintAndCut();
         }
     }
